@@ -5,8 +5,9 @@
  */
 var xola = xola || {};
 
-xola.Experiences = Backbone.Collection.extend({
+var Experiences = Backbone.Collection.extend({
 	model: xola.Experience,
+	
 	sync: function(method, model) {
 
 		var params = _.extend({
@@ -26,3 +27,5 @@ xola.Experiences = Backbone.Collection.extend({
 		return response;
 	}
 });
+
+xola.Experiences = new Experiences();

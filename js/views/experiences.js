@@ -14,9 +14,11 @@ xola.AppView = Backbone.View.extend({
 
 		this.$el.find(xola.config.CSS.classes.loader).fadeIn(1000);
 
-		this.exp = new xola.Experiences();
+		//Load all Mustache templates
+		$.Mustache.load(xola.config.template.skeleton.path);
+		$.Mustache.load(xola.config.template.item.path);
 
-		this.exp.bind("reset", this.render);
+		xola.Experiences.bind("reset", this.render);
 
 		// this.exp.fetch({
 		// 	success: function(r) {
@@ -24,19 +26,20 @@ xola.AppView = Backbone.View.extend({
 		// 		this.render(r);
 		// 	}
 		// });
-		
+
 		// I have to do this only becasue am not able to load the feed
-		this.exp.reset([experience1, experience2]);
+		xola.Experiences.reset([experience1, experience2]);
 	},
 
 	render: function() {
-		var skeleton = $.mustache(xola.config.template.skeleton, this.exp);
+		// var skeleton = $.mustache(xola.config.template.skeleton, this.exp);
 		$(xola.config.CSS.classes.loader).animate({
 			marginTop:'1%'
 		},1500, function() {
 			$(this).removeClass(xola.config.CSS.loader);
+			xola.Experiences.forEach(function(model){
+				$(xola.config.el).mustache( xola.config.template.skeleton.id, model.attributes );
+			});
 		});
-		this.$el.appendTo(skeleton);
-		$(xola.config.CSS.id.skeletonWrapper).fadeIn(1500);
 	}
 });

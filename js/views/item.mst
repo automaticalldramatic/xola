@@ -1,0 +1,5 @@
+<script id="tpl-item" type="text/html">
+<div id="item">
+	{{name}} is a good name
+</div>
+</script>

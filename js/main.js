@@ -11,17 +11,23 @@ var xola = xola || {};
 
 xola.config = {
 	template: {
-		skeleton: 'js/views/skeleton.mst',
-		item: 'js/views/item.mst'
+		skeleton: {
+			path: 'js/views/skeleton.mst',
+			id: 'tpl-wrapper'
+		},
+		item: {
+			path: 'js/views/item.mst',
+			id: 'tpl-item'
+		}
 	},
 	el: $('#container'),
 	CSS: {
 		classes: {
-			loader: '.loading'
+			loader: '.loading',
+			item: "experience"
 		},
 		id: {
-			header: '#header',
-			skeletonWrapper: '#wrapper'
+			header: '#header'
 		},
 		loader: 'loading'
 	}

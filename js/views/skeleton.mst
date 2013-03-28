@@ -1,3 +1,5 @@
+<script id="tpl-wrapper" type="text/html">
 <div id="wrapper">
-	This is so good
+	<h2>{{desc}}</h2>
 </div>
+</script>
