@@ -8,7 +8,7 @@ var xola = xola || {};
 
 xola.Experience = Backbone.Model.extend();
 
-var experience1 = new Experience([
+var experience1 = new xola.Experience([
 	{"category":"Wilderness Training",
 	"complete":true,
 	"currency":"USD",
@@ -53,7 +53,7 @@ var experience1 = new Experience([
 	}
 ]);
 
-var experience2 = new Experience([
+var experience2 = new xola.Experience([
 	{
 		"category":"Photography","complete":true,"currency":"USD","desc":"Photograph Yosemite from a different perspective with the support and guidance of an expert. Take control of your camera while capturing images of landscapes and a diverse array of wildlife. This original program is crafted to help sharpen your skills and optimize your time in Yosemite. Learn interesting techniques from our richly talented Yosemite photographers while shooting in select locations during optimal periods of light.\n\nSubjects of our workshops and photo field sessions may include granite monoliths and domes, waterfalls, wildflowers, black bears, and other wildlife. Beginners and professional photographers alike have benefited from working with our experienced mentors. The workshop is suitable for all levels of photographers with various types of cameras (including point and shoot). Programs are crafted by an expert photographer who will lead the session. \n\nSome of our Signature Specialty Workshops include: Yosemite Valley Icons Photography Session, Behind the Lens: Yosemite Landscape Photo Session, and Yosemite High Country Icons Photography Session.",
 		"duration":300,"excerpt":"Sharpen your photographic skills, take control of your camera, and achieve your artistic goals in the natural setting of Yosemite National Park.",

@@ -2,12 +2,11 @@
  * js/collections/experiences.js
  * Model Collection for Experience
  *
- * We use static data cause the JSON feed is not working
  */
 var xola = xola || {};
 
 xola.Experiences = Backbone.Collection.extend({
-	model: Experience,
+	model: xola.Experience,
 	// sync: function(method, model) {
 
 	// 	var params = _.extend({

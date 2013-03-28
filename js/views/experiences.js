@@ -5,13 +5,22 @@
  */
 var xola = xola || {};
 
+xola.config = {
+	template: {
+		skeleton: 'js/views/skeleton.mst',
+		item: 'js/views/item.mst'
+	}
+};
+
 xola.AppView = Backbone.View.extend({
+
+
 	initialize: function () {
 
 		// to solve the this issue
 		_.bindAll(this, "render");
 
-		this.exp = new Experiences();
+		this.exp = new xola.Experiences();
 
 		this.exp.bind("reset", this.render);
 
@@ -27,7 +36,6 @@ xola.AppView = Backbone.View.extend({
 	},
 
 	render: function() {
-		var skeleton = $.mustache(config.template.skeleton, this.exp);
-
+		var skeleton = $.mustache(xola.config.template.skeleton, this.exp);
 	}
 });

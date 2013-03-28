@@ -1,20 +1,18 @@
 /**
- * Main JS file for myXola.
- * @description Loads static data
+ * Main JS file for myXola. 
+ *
+ * //js main.js
+ * 
  * @author Rizwan Iqbal <mailme@rizwaniqbal.com>
  * @see https://bitbucket.org/rizwaniqbal/xola/overview
  */
 
-(function($, undefined) {
-	"use strict";
+var app = app || {};
+var ENTER_KEY = 13;
 
-	if(jQuery === undefined)
-		return;
+$(function() {
 
-	var xola = xola || {};
+	// Kick things off by creating the **App**.
+	new xola.AppView();
 
-	$(function() {
-		new xola.AppView();
-	});
-
-})(jQuery);
+});
