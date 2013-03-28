@@ -38,5 +38,5 @@ xola.AppView = Backbone.View.extend({
 		});
 		this.$el.appendTo(skeleton);
 		$(xola.config.CSS.id.skeletonWrapper).fadeIn(1500);
-	},
+	}
 });
