@@ -30,7 +30,8 @@ xola.config = {
 			header: '#header'
 		},
 		loader: 'loading'
-	}
+	},
+	amplifyKey: ''
 };
 
 $(function() {

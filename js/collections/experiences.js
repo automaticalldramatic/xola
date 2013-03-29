@@ -9,7 +9,7 @@ var Experiences = Backbone.Collection.extend({
 	model: xola.Experience,
 	
 	sync: function(method, model) {
-
+		console.log('sync triggered');
 		var params = _.extend({
 			type: 'GET',
 			dataType: 'jsonp',
@@ -17,6 +17,8 @@ var Experiences = Backbone.Collection.extend({
 		});
 		return $.ajax(params);
 	},
+
+	localStorage: new Store("Experiences"),
 
 	url: function() {
 		return "https://xola.com/experiences";
