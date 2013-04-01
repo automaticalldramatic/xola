@@ -13,23 +13,24 @@ xola.config = {
 	template: {
 		skeleton: {
 			path: 'js/views/skeleton.mst',
-			id: 'tpl-wrapper'
+			id: 'tpl-exp-wrapper'
 		},
 		item: {
 			path: 'js/views/item.mst',
 			id: 'tpl-item'
 		}
 	},
-	el: $('#container'),
+	el: $('#wrapper'),
 	CSS: {
 		classes: {
-			loader: '.loading',
-			item: "experience"
+			loader: 'loading',
+			item: "experience",
+			shadow: "one-edge-shadow"
 		},
 		id: {
+			container: '#inner-wrap',
 			header: '#header'
-		},
-		loader: 'loading'
+		}
 	},
 	amplifyKey: ''
 };

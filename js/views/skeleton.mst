@@ -1,8 +1,12 @@
-<script id="tpl-wrapper" type="text/html">
-<div id="wrapper">
-	<h2>{{name}}</h2>
-	<hr>
-	<img src="//xola.com/{{photo.src}}" width="600" id="{{photo.id}}" />
-	<p>{{desc}}</p>
-</div>
+<script id="tpl-exp-wrapper" type="text/html">	
+	<li class="container-fluid">
+		<div class="row-fluid">
+			<div class="span10 offset2">
+				<h2>{{name}}</h2>
+				<hr>
+				<img src="//xola.com/{{photo.src}}" width="600" id="{{photo.id}}" />
+				<p>{{desc}}</p>
+			</div>
+		</div>
+	</li>
 </script>
