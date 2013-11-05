@@ -10,3 +10,6 @@
 * The app must be responsive -- web and mobile device
 * The app need not have a landing page -- you can just start by displaying the first experience
 * Show a preview of the next and previous experience -- the user should also be able to navigate to the next and previous experiences
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rizwaniqbal/xola/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
